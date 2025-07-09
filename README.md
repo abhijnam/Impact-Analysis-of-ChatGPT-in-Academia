@@ -1,4 +1,4 @@
-# Survey-of-ChatGPT
+# Impact Analysis of ChatGPT in Academia
 This project was for a class called Social Issues, Ethics and Professionalism.
 We created a Google forms asking questions about the useage of ChatGPT in Academia.
 The report generated can be found in the .docx format which encapsulates our findings.

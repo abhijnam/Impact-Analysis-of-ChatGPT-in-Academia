@@ -2,9 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import openpyxl
 from tabulate import tabulate
+import os
+file_path_1 = os.path.dirname(os.path.abspath('heard.xlsx'))
+file_path_2 = os.path.dirname(os.path.abspath('techvschatgpt.xlsx'))
 # Table 1: counts the number of people who heard of chat GPT
 def table_1():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\heard.xlsx')
+    var1 = pd.read_excel(file_path_1)
     question = list(var1['Have you heard of ChatGPT?']) # made list from column responses
     myres = list(var1[' is cheating?'])
     mycount_yes = 0 # counts the number of people who said yes to the question "Do you think using chatGPT is considered cheating"
@@ -28,7 +31,7 @@ def table_1():
 
 #Table 2: counts the number of people who heard of chat GPT but never used it
 def table_2():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\heard.xlsx')
+    var1 = pd.read_excel(file_path_1)
     myh = list(var1['Have you heard of ChatGPT?'])
     myres = list(var1[' is cheating?'])
     mycount_yes = 0 # counts the number of people who said yes to the question "Do you think using chatGPT is considered cheating"
@@ -49,7 +52,7 @@ def table_2():
 
 #Table 3: counts the number of people who never heard of chat GPT
 def table_3():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\heard.xlsx')
+    var1 = pd.read_excel(file_path_1)
     myh = list(var1['Have you heard of ChatGPT?'])
     myres = list(var1[' is cheating?'])
     mycount_yes = 0 # counts the number of people who said yes to the question "Do you think using chatGPT is considered cheating"
@@ -69,7 +72,7 @@ def table_3():
 
 #Table 4: the career paths/fields selected
 def table_4():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\techvschatgpt.xlsx')
+    var1 = pd.read_excel(file_path_2)
     myh = list(var1['Stream'])
     arts = 0
     tech = 0
@@ -107,7 +110,7 @@ def table_4():
 
 #Table 5: level of education selected
 def table_5():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\graph1.xlsx')
+    var1 = pd.read_excel(file_path_2)
     myres = list(var1['level of edu'])
     bachelors = 0
     masters = 0
@@ -131,7 +134,7 @@ def table_5():
 
 #Table 6: what is chat GPT used for
 def table_6():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\graph1.xlsx')
+    var1 = pd.read_excel(file_path_2)
     myres = list(var1['What do you use ChatGPT for? (Select all that apply)'])
     gq = 0
     entertainment = 0
@@ -157,7 +160,7 @@ def table_6():
 
 #Table 7: opinions of chat GPT outside of tech
 def table_7():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\techvschatgpt.xlsx')
+    var1 = pd.read_excel(file_path_2)
     myh = list(var1['Stream'])
     myres = list(var1['Have you heard of ChatGPT?'])
     mych = list(var1[' is cheating?'])
@@ -182,7 +185,7 @@ def table_7():
 
 #Table 8: opinions of chat GPT in tech
 def table_8():
-    var1 = pd.read_excel('C:\\Users\\abhim\\OneDrive\\Desktop\\techvschatgpt.xlsx')
+    var1 = pd.read_excel(file_path_2)
     myh = list(var1['Stream'])
     myres = list(var1['Have you heard of ChatGPT?'])
     mych = list(var1[' is cheating?'])
@@ -213,4 +216,5 @@ if __name__ == "__main__":
     table_6()
     table_7()
     table_8()
+
 
